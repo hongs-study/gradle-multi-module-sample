@@ -1,4 +1,4 @@
-package com.example.shopcore;
+package com.example.shopcore.code;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
