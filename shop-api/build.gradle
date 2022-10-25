@@ -26,6 +26,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     implementation project(':shop-core')
+    implementation project(':shop-entity')
 }
 
 tasks.named('test') {

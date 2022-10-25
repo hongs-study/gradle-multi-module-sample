@@ -2,3 +2,4 @@ rootProject.name = 'gradle-multi-module'
 
 include 'shop-api'
 include 'shop-core'
+include 'shop-entity'
