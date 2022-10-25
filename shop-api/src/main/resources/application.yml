@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: loc
+    include:
+      - core
+      - entity
