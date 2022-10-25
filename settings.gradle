@@ -1,4 +1,4 @@
 rootProject.name = 'gradle-multi-module'
 
-include 'shop-core'
 include 'shop-api'
+include 'shop-core'
