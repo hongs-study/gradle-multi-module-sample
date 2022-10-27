@@ -4,3 +4,8 @@ spring:
     include:
       - core
       - entity
+
+  jpa:
+    hibernate:
+      show-sql: true
+    open-in-view: false

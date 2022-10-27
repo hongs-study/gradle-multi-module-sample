@@ -3,7 +3,8 @@ package com.example.shopapi;
 import com.example.shopcore.code.ReviewCode;
 import com.example.shopcore.utils.email.EmailDto;
 import com.example.shopcore.utils.email.EmailUtil;
-import com.example.shopentity.review.Member;
+import com.example.shopentity.member.entity.Member;
+import com.example.shopentity.member.repository.MemberRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReviewController {
 
     private final EmailUtil emailUtil;
+    private final MemberRepository memberRepository;
+
+    @GetMapping("/member")
+    public Member callRepository() {
+        Member member = new Member();
+        member.setName("홍길동");
+        memberRepository.save(member);
+        Member findMember = memberRepository.findById(1L).get();
+        return findMember;
+    }
 
     @GetMapping("/code-title/delete")
     public String getCode() {
@@ -37,6 +48,7 @@ public class ReviewController {
             .text(text)
             .build()
         );
+
         return ResponseEntity.ok("Success send email");
     }
 
