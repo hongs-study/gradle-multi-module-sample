@@ -1,4 +1,4 @@
-package com.example.shopentity.review;
+package com.example.shopentity.member.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
