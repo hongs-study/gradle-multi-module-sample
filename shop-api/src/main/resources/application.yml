@@ -1,9 +1,11 @@
 spring:
   profiles:
     active: local
+    group:
+      local:
+        - entity-local
     include:
       - entity
-      - entity-${spring.profiles.active}
       - core
 
   jpa:
