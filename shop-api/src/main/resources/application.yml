@@ -1,9 +1,10 @@
 spring:
   profiles:
-    active: loc
+    active: local
     include:
-      - core
       - entity
+      - entity-${spring.profiles.active}
+      - core
 
   jpa:
     hibernate:

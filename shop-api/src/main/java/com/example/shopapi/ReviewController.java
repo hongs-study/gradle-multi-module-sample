@@ -3,6 +3,7 @@ package com.example.shopapi;
 import com.example.shopcore.code.ReviewCode;
 import com.example.shopcore.utils.email.EmailDto;
 import com.example.shopcore.utils.email.EmailUtil;
+import com.example.shopentity.TestService;
 import com.example.shopentity.member.entity.Member;
 import com.example.shopentity.member.repository.MemberRepository;
 import java.util.List;
@@ -18,6 +19,14 @@ public class ReviewController {
 
     private final EmailUtil emailUtil;
     private final MemberRepository memberRepository;
+
+    private final TestService testService;
+
+
+    @GetMapping("/profile-test")
+    public void profileTest() {
+        testService.testActive();
+    }
 
     @GetMapping("/member")
     public Member callRepository() {

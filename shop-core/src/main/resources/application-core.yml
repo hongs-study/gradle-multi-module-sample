@@ -11,3 +11,9 @@ spring:
           auth: true
           starttls:
             enable: true
+
+
+
+
+shop:
+  active-value: core-local
